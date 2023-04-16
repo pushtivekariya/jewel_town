@@ -144,7 +144,7 @@ function Shoping_cart() {
     }
     else if(cartPrice < promocodeUse?.minimum_order_amount)
     {
-        toast.error("Your cartprice is less than minimum order amount");
+        toast.error("Your order is less than minimum order amount");
     }
     else {
       console.log(checkPromocodeResponse.data, "checkpromocoderesponse");
