@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- saved from url=(0223)https://services.titan.co.in/session-share/iframe#%7B%22scope%22%3A%22Zoya%22%2C%22window_origin%22%3A%22https%3A%2F%2Fwww.zoya.in%22%2C%22iframe_origin%22%3A%22https%3A%2F%2Fservices.titan.co.in%22%2C%22debug%22%3Afalse%7D -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Titan - Session share Iframe</title>
+
+<script>
+	window.IframeShim = (function() {
+		var _hash_data = JSON.parse(decodeURIComponent(window.location.hash
+				.substr(1))), _scope = _hash_data.scope, _window_origin = _hash_data.window_origin, _iframe_origin = _hash_data.iframe_origin, _debug = _hash_data.debug;
+
+		function _log() {
+			if (!_debug)
+				return;
+			arguments[0] = ":XTITANBRANDSHARE_IFR: " + arguments[0];
+			console.log.apply(console, arguments);
+		}
+
+		function _set_cookie(cookie_name, cookie_value, expires_mins,
+				secure_flag) {
+			if (typeof (cookie_value) != "undefined" && cookie_value != null) {
+				var d = new Date();
+				d.setTime(d.getTime() + expires_mins * 1000 * 60);
+				var cookie_str = cookie_name
+						+ "="
+						+ cookie_value
+						+ "; domain="
+						+ _iframe_origin.replace(window.location.protocol, "")
+								.replace("//", "").replace("/", "")
+						+ ";expires=" + d.toUTCString()
+						+ (secure_flag ? ";secure" : "") + ";Path=/";
+						if (
+							navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.2 Mobile/15E148 Safari/604.1" &&
+							navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.2 Mobile/15E148 Safari/604.1" &&
+							navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.2 Mobile/15E148 Safari/604.1" &&
+							navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.2 Mobile/15E148 Safari/604.1" && 
+							navigator.userAgent != "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1 Safari/605.1.15" && 
+							navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Instagram 157.0.0.23.119 (iPhone7,2; iOS 12_4_8; en_IN; en-IN; scale=2.00; 750x1334; 241452311)" && 
+							navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/79.0.3945.73 Mobile/15E148 Safari/605.1" && 
+							navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_1_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/16D57 [FBAN/FBIOS;FBDV/iPhone9,3;FBMD/iPhone;FBSN/iOS;FBSV/12.1.4;FBSS/2;FBID/phone;FBLC/en_GB;FBOP/5]" &&
+							navigator.userAgent != "Mozilla/5.0 (iPad; CPU OS 12_4_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.2 Mobile/15E148 Safari/604.1" &&
+							navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1 Mobile/15E148 Safari/604.1" &&
+							navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) GSA/125.2.332137730 Mobile/15E148 Safari/604.1" &&
+							navigator.userAgent != "Mozilla/5.0 (iPad; CPU OS 12_4_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.2 Mobile/15E148 Safari/604.1" &&
+							navigator.userAgent != "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.2 Safari/605.1.15" &&
+							navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) GSA/125.2.332137730 Mobile/15E148 Safari/604.1" &&
+							navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/83.0.4103.88 Mobile/15E148 Safari/604.1" &&
+							navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148/Worklight/8.0.0.00.2016-01-24T11:48:54Z" &&
+							navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) GSA/89.2.287201133 Mobile/15E148 Safari/605.1" &&
+							navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.2 Mobile/15E148 Safari/604.1" &&
+							navigator.userAgent != "Mozilla/5.0 (iPad; CPU OS 12_4_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.2 Mobile/15E148 Safari/604.1" &&
+							navigator.userAgent != "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Safari/605.1.15" &&
+							navigator.userAgent != "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.2 Safari/605.1.15" &&
+							navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) GSA/123.4.330040034 Mobile/15E148 Safari/604.1" &&
+							navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) GSA/66.0.230776083 Mobile/15E148 Safari/605.1" &&
+							navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1"  &&
+ 							navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_1_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1" &&
+							navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.1 Mobile/15E148 Safari/604.1" &&
+							navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Instagram 164.0.0.35.119 (iPhone11,8; iOS 12_3_1; en_IN; en-IN; scale=2.00; 828x1792; 252055975)" && 
+ 							navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Instagram 164.0.0.35.119 (iPhone7,2; iOS 12_4_8; en_IN; en-IN; scale=2.00; 750x1334; 252055975)" &&
+ 							navigator.userAgent !=  "Mozilla/5.0 (iPhone; CPU iPhone OS 12_1_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1" &&
+ 							navigator.userAgent !=  "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/79.0.3945.73 Mobile/15E148 Safari/605.1"  && 
+							 navigator.userAgent !=  "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/86.0.4240.93 Mobile/15E148 Safari/604.1" && 
+							 navigator.userAgent != "Mozilla/5.0 (iPad; CPU OS 12_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1" &&
+ navigator.userAgent != "Mozilla/5.0 (iPad; CPU OS 12_4_9 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.2 Mobile/15E148 Safari/604.1" &&
+ navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) GSA/137.2.345735309 Mobile/15E148 Safari/604.1" &&
+ navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 14_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/87.0.4280.77 Mobile/15E148 Safari/604.1"  &&
+ navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_0_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) GSA/76.0.253539693 Mobile/16A405 Safari/604.1" &&
+ navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148" &&
+ navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.2 Mobile/15E148 Safari/604.1" &&
+ navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.2 Mobile/15E148 Safari/604.1" &&
+ navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 14_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.1 Mobile/15E148 Safari/604.1" &&
+ navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 14_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148" &&
+ navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_9 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [FBAN/FBIOS;FBDV/iPhone7,2;FBMD/iPhone;FBSN/iOS;FBSV/12.4.9;FBSS/2;FBID/phone;FBLC/en_GB;FBOP/5]" &&
+ navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1" &&
+ navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_9 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 LightSpeed [FBAN/MessengerLiteForiOS;FBAV/294.0.0.60.128;FBBV/262406393;FBDV/iPhone7,2;FBMD/iPhone;FBSN/iOS;FBSV/12.4.9;FBSS/2;FBCR/;FBID/phone;FBLC/en-GB;FBOP/0]" &&
+ navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1" &&
+ navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"  && 
+navigator.userAgent != "Mozilla/5.0 (iPhone; CPU iPhone OS 12_5_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.2 Mobile/15E148 Safari/604.1" ) {
+						cookie_str += ";samesite=none";
+					}
+				document.cookie = cookie_str;
+			}
+		}
+
+		window.addEventListener("message", function(event) {
+			_log("incoming postMessage", event.origin, event.data);
+
+			var origin = event.origin || event.originalEvent.origin;
+			if ([ _window_origin, _iframe_origin ].indexOf(origin) === -1)
+				return;
+
+			var data = null;
+			try {
+				data = JSON.parse(event.data);
+			} catch (e) {
+			}
+
+			if (typeof data !== "object" || data instanceof Array
+					|| data == null || typeof (data) == 'undefined')
+				return;
+			if (!("type" in data) || (data.type !== "cookie_write"))
+				return;
+
+			var expires_mins = parseInt(data.expires_mins, 10);
+
+			if (data.type === "cookie_write") {
+				_set_cookie(data.cookie_name, data.cookie_val,
+						expires_mins, data.secure_flag);
+			}
+		});
+
+		function _get_cookies() {
+			var cookiesToPush = [ 'WCToken', 'WCTrustedToken',
+					'currencyDetail', 'currencyList', 'sessionTime',
+					'userType', 'UserInfo','storeDetails' ];
+			var cstring = document.cookie.split(';'), cookies = {};
+			cstring.forEach(function(cs) {
+				var vals = cs.trim().split("=");
+				if (!vals[0])
+					return;
+				for (var i = 0; i < cookiesToPush.length; i++) {
+					if (cookiesToPush[i] === vals[0]) {
+						cookies[vals[0]] = vals[1];
+					}
+				}
+			});
+			return cookies;
+		}
+
+		function _send_xdomain_cookie_data_to_brand() {
+			var msg = {
+				cookies : _get_cookies(),
+				type : 'cookie_set',
+				scope : _scope
+			};
+			window.parent.postMessage(JSON.stringify(msg), _window_origin);
+		}
+		_send_xdomain_cookie_data_to_brand();
+
+	})();
+</script>
+</head>
+<body>
+
+</body></html>

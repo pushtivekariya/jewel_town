@@ -1,0 +1,91 @@
+.cards {
+    width: 450px;
+    background-color: #ffff;
+    /* border: 1px solid black; */
+    box-shadow: 0px 1px 15px 1px #c39584;
+    cursor: pointer;
+    transition: all 0.5s;
+    margin-top: 100px;
+    height: 550px;
+    margin-bottom: 100px;
+    font-family: serif;
+    color: #c39584;
+}
+
+/* .image img {
+    transition: all 0.5s;
+     border-radius: 50%; 
+}  */
+
+ /* .cards:hover .image img {
+    transform: scale(1.5)
+}  */
+
+.btns {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%
+}
+
+.name {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #000;
+}
+
+.idd {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.idd1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.number {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -20px;
+}
+
+.follow {
+    font-size: 12px;
+    font-weight: 500;
+    /* color: #444444 */
+}
+
+.btn1 {
+    height: 40px;
+    width: 150px;
+    border: none;
+    background-color: #000;
+    color: #c39584;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.text span {
+    font-size: 13px;
+    /* color: #545454; */
+    font-weight: 500
+}
+
+.icons i {
+    font-size: 19px
+}
+
+hr .new1 {
+    border: 1px solid
+}
+
+.join {
+    font-size: 14px;
+    /* color: #a0a0a0; */
+    font-weight: bold
+}
+
+.date {
+    background-color: #ccc
+}

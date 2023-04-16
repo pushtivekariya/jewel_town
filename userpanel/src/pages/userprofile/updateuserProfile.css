@@ -1,0 +1,59 @@
+.user-profile-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+  }
+  
+  .form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .form-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-btn {
+    background-color: #c39784;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    height: 50px;
+    line-height: 1em;
+    padding: 0.875em 1.875em;
+    position: relative;
+    text-align: center;
+  }
+  .form-btn:hover{
+    color: #fff;
+  }
+
+  .btnsub{
+    display: flex;
+  }
+  

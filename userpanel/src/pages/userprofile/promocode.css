@@ -1,0 +1,121 @@
+.cradcoupen-margin {
+    margin-bottom: 1rem;
+}
+
+.cradcoupen {
+    border: 0;
+    box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+    -ms-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+}
+.cradcoupen {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    margin-top: 70px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    max-height: 270px;
+    word-wrap: break-word;
+    background:linear-gradient(to bottom right,#ebcec3,#deb1a0,#c99e8d);
+    background-clip: border-box;
+    border: 1px solid #e6e4e9;
+    border-radius: 8px;
+}
+.cradcoupen-title{
+    border: 1px dashed #c39584;
+    margin-right: -30px;
+    width: 240px;
+    padding-left: 10px;
+}
+.promocodebtn
+{
+    margin-top: 6px;
+}
+.cradcoupen .cradcoupen-header.no-border {
+    border: 0;
+}
+.cradcoupen .cradcoupen-header {
+    background: none;
+    padding: 0 0.9375rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+}
+.cradcoupen-header:first-child {
+    border-radius: calc(8px - 1px) calc(8px - 1px) 0 0;
+}
+
+.widget-49 .widget-49-title-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #c39584;
+  width: 4.5rem;
+  height: 3.6rem;
+  border-radius: 50%;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-primary .widget-49-date-day {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.widget-49 .widget-49-title-wrapper .widget-49-meeting-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.4rem;
+  color: black;
+  font-size: 14px;
+  font-weight: 700;
+
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-meeting-info .widget-49-pro-title {
+  color: black;
+  font-size: 14px;
+}
+
+.widget-49 .widget-49-meeting-points {
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: .5rem;
+}
+
+.widget-49 .widget-49-meeting-points .widget-49-meeting-item {
+  display: list-item;
+  color: black;
+}
+
+.widget-49 .widget-49-meeting-points .widget-49-meeting-item span {
+  margin-left: .5rem;
+}
+
+
+.circle1, .circle2{
+    background: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+.circle1{
+    left: -25px;
+}
+.circle2{
+    right: -25px;
+}

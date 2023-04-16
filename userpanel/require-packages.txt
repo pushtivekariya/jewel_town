@@ -1,0 +1,17 @@
+npm i bootstrap
+ npm install react-slick --save
+ npm install animsition
+npm i react-router-dom@6
+
+npm install @mui/material @mui/styled-engine-sc styled-components
+npm install @mui/material @emotion/react @emotion/styled
+npm install @fontsource/roboto
+npm install @mui/icons-material
+npm i mdb-react-ui-kit
+npm i react-toastify
+npm install --save-dev @iconify/react
+npm i sweetalert
+
+
+1.looka.com for logo
+2.removeBg.com for remove images background

@@ -1,0 +1,49 @@
+.responsive{
+  height: 90vh;
+  padding-top: 50px;
+}
+
+
+.images img{
+  height: 50px;
+  margin-top: 40px;
+ 
+}
+/* .slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+} */
+
+  @media screen and (max-width: 1024px) {
+    .slick-slide {
+      margin: 0 20px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .slick-slide {
+      margin: 0 10px;
+    }
+  }
+
+
+  /* .text{
+    font-size: 35px;
+    position: absolute;
+    color: black;
+    margin: 200px 0px 0px 80px;
+    text-shadow: 2px 2px 4px #c39584;
+  } */
+
+ 
+
+  
+  /* style={{animation:'animat 9s ease infinate' ,fontSize:'35px', position: 'absolute', color:'black',margin:'200px  0px  0px 80px',textShadow: '2px 2px 4px #c39584'}} */
+
+  
+  
+ 
