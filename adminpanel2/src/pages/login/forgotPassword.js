@@ -19,15 +19,19 @@ const ForgotPassword = () => {
 
   const SenOtpFunc = async () => {
     //  form Validation
-    console.log(passwordData?.email, "email");
-
-    const response = await sendOtpApi(passwordData?.email);
-    console.log(response, "responseresponse");
-    if (response.status == 1) {
-      setformStep(formStep + 1);
-      toast.success("OTP is Sent Successfully On Your Email");
+    if (passwordData.email == "") {
+      toast.error("Please Enter Email");
     } else {
-      toast.error("Please Enter Valid Email");
+      console.log(passwordData?.email, "email");
+
+      const response = await sendOtpApi(passwordData?.email);
+      console.log(response, "responseresponse");
+      if (response.status == 1) {
+        setformStep(formStep + 1);
+        toast.success("OTP is Sent Successfully On Your Email");
+      } else {
+        toast.error("Please Enter Valid Email");
+      }
     }
   };
 
@@ -87,7 +91,7 @@ const ForgotPassword = () => {
               style={{
                 marginTop: "180px",
                 marginBottom: "200px",
-                border:"none"
+                border: "none",
                 // border: "2px solid black",
               }}
             >
@@ -186,9 +190,12 @@ const ForgotPassword = () => {
                               />
                             </div>
                           </div>
-                          <div className="form-group"   style={{ alignItems: "center", width: "50%" }}>
+                          <div
+                            className="form-group"
+                            style={{ alignItems: "center", width: "50%" }}
+                          >
                             <button
-                            style={{
+                              style={{
                                 backgroundColor: "#c39584",
                                 border: "2px solid black",
                                 fontSize: "20px",
@@ -238,7 +245,7 @@ const ForgotPassword = () => {
                               />
                             </div>
                           </div>
-                          <div className="form-group"  >
+                          <div className="form-group">
                             <div
                               className="input-group"
                               style={{
@@ -263,7 +270,10 @@ const ForgotPassword = () => {
                               />
                             </div>
                           </div>
-                          <div className="form-group"  style={{ alignItems: "center", width: "50%" }}>
+                          <div
+                            className="form-group"
+                            style={{ alignItems: "center", width: "50%" }}
+                          >
                             <button
                               style={{
                                 backgroundColor: "#c39584",
