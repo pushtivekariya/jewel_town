@@ -111,7 +111,7 @@ function View_order() {
       width: "120px",
     },
     {
-      name: "Cancel Order",
+      name: "Action",
       cell: (row) => (
         <>
           {row.order_status == 1 ? (
