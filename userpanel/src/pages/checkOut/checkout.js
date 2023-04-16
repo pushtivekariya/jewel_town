@@ -573,7 +573,7 @@ function Checkout() {
                         />
                         <div className=" container" style={{ marginLeft: "500px" }} >
                           {/* <div className="card-header ">BILLING DETAIL</div> */}
-                          <ul className="list-group row" style={{ width: "210px" }}>
+                          <ul className="list-group row" style={{ width: "220px" }}>
 
                             <li className="list-group-item" style={{ fontSize: "15px" }}><span style={{ color: "black", fontFamily: "AGaramondPro-Regular" }}>AMOUNT</span>   : <span style={{ textAlign: "right" }}>Rs.{cartPrice}</span></li>
                             <li className="list-group-item" style={{ fontSize: "15px" }}><span style={{ color: "black", fontFamily: "AGaramondPro-Regular" }}>DISCOUNT</span> : - <span>Rs.{DiscountData === null ? 0 : amount.discount_amt}</span> </li>
