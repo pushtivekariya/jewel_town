@@ -267,11 +267,11 @@ const finalDate =
             <tr>
               <td class="no">${index + 1}</td>
               <td class="desc"><h3>${products.product_names}</h3>${products.short_description}</td>
-              <td class="unit">${products.price}</td>
+              <td class="unit">Rs.${products.price}</td>
               <td class="qty">${products.user_qty}</td>
               <td class="qty">${products.weight}</td>
               <td class="qty">${products.jewellary_purity}</td>
-              <td class="total">${products.total_amt}</td>
+              <td class="total">Rs.${products.total_amt}</td>
             </tr>`
           })}
             
@@ -281,12 +281,12 @@ const finalDate =
             <tr>
               <td colspan="2"></td>
               <td colspan="2">SUBTOTAL</td>
-              <td>${invoiceData.total_amount}</td>
+              <td>Rs.${invoiceData.total_amount}</td>
             </tr>
             <tr>
               <td colspan="2"></td>
               <td colspan="2">DISCOUNT</td>
-              <td>${invoiceData.discount_amount}</td>
+              <td>Rs.${invoiceData.discount_amount}</td>
             </tr>
             <tr>
               <td colspan="2"></td>
