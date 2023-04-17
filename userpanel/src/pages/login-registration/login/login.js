@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { Link, useNavigate } from "react-router-dom";
@@ -42,7 +42,7 @@ if (logindata.email == null) {
       loginarr.push(logindataa);
       toast.success("login successfully.............");
       navigate("/");
-      // document.location.reload();
+      document.location.reload();
     }
   };
 
@@ -89,7 +89,6 @@ if (logindata.email == null) {
             <Link to="/registration" style={{color:'#c39584'}}>register here</Link>
             <Link style={{marginLeft:'57%',color:'#c39584'}}   to="/forgotpassword">forgot password</Link>
           </form>
-          {/* <ToastContainer /> */}
         </div>
       </div>
     </>
