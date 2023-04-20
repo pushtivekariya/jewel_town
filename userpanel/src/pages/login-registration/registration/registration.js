@@ -49,8 +49,11 @@ const Registration = () => {
     else if (data.confirmPassword == "") {
       toast.error("please enter confirm password");
     }
-    else if ((data.password !== data.confirmPassword) === false) {
-      toast.error("please enter same password");
+    else if(data.confirmPassword == ""){
+      toast.error("Please Enter Confirm Password")
+    }
+    else if ((data.password !== data.confirmPassword) == false) {
+      toast.error("Password Does Not Match");
     } 
     else if (datevalidation() === false) {
       toast.error("please select date of birth");
