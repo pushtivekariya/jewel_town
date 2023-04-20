@@ -197,11 +197,11 @@ function Product_view() {
           email: login[0].email,
         });
         localStorage.setItem("cart_list", JSON.stringify(add));
-        setTimeout(() => {
         toast.success("product is added to your cart")
-          
-        }, 4000);
-        window.location.reload();
+
+        setTimeout(() => {
+        window.location.reload();    
+        }, 3000);
        
       }
     }
