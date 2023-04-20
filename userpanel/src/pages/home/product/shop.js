@@ -28,22 +28,22 @@ function Shop() {
   const gender = ['Man', 'Woman']
   const jwellery_type = ['Gold', 'Silver']
 
- 
+
 
   const getProductFunction = async (page, perPage) => {
-    console.log(page,"page",perPage,"perpage");
-    
-    const response = await getallproducts(page,perPage);
-    if(response?.status == 1){
+    console.log(page, "page", perPage, "perpage");
+
+    const response = await getallproducts(page, perPage);
+    if (response?.status == 1) {
       setProductData(response?.result);
       setTotalData(response?.totaldata)
       setFilterData({ jwellery_type: '', gender: '', price: 'All', product_name_id: '' })
     }
     console.log(response.result, "response");
-    
+
   }
 
-  
+
   const getProductNameFunction = async () => {
     const response = await getproductname();
     setProductName(response?.result)
@@ -57,12 +57,12 @@ function Shop() {
   }
 
   useEffect(() => {
-    console.log(currentPage,"current pageeeeeeeeeeeeeeee");
+    console.log(currentPage, "current pageeeeeeeeeeeeeeee");
     getProductFunction(currentPage, perPage);
     // getProductFunction()
     getProductNameFunction();
   }, [])
-  
+
 
   const handlePageChange = (page) => {
     console.log(page, 'page');
@@ -81,45 +81,43 @@ function Shop() {
 
 
   const addWishlist = (wishlist) => {
-    if(login == null)
-    {
-     toast.error("Please login...")
+    if (login == null) {
+      toast.error("Please login...")
     }
-    else 
-    {
-     var wish = [];
-     wish =  JSON.parse(localStorage.getItem('wish_list')) || [];
-     if(wish.length > 0) {
-       let count = wish.some(product => product.product_id === wishlist.product_id && product.email === login[0].email);
-       if(!count) {
-         wish.push({...wishlist,user_qty:1 , email:login[0].email})
-         localStorage.setItem('wish_list' , JSON.stringify(wish));
-         toast.success("product is already into wishlist");
-         setTimeout(() => {
-         window.location.reload();         
-         }, 4000);
-       } else {
-         toast.error("product is already into wishlist");
-         navigate("/wishlist");
-       }
-     }
-       else {
-         wish.push({...wishlist,user_qty : 1, email:login[0].email})
-         localStorage.setItem('wish_list',JSON.stringify(wish));
-         // window.localStorage.reload();
-       }
+    else {
+      var wish = [];
+      wish = JSON.parse(localStorage.getItem('wish_list')) || [];
+      if (wish.length > 0) {
+        let count = wish.some(product => product.product_id === wishlist.product_id && product.email === login[0].email);
+        if (!count) {
+          wish.push({ ...wishlist, user_qty: 1, email: login[0].email })
+          localStorage.setItem('wish_list', JSON.stringify(wish));
+          toast.success("product is already into wishlist");
+          setTimeout(() => {
+            window.location.reload();
+          }, 4000);
+        } else {
+          toast.error("product is already into wishlist");
+          navigate("/wishlist");
+        }
+      }
+      else {
+        wish.push({ ...wishlist, user_qty: 1, email: login[0].email })
+        localStorage.setItem('wish_list', JSON.stringify(wish));
+        // window.localStorage.reload();
+      }
     }
- 
-  
-   }
- 
+
+
+  }
+
 
 
   return (
 
     <>
-   {/* <Header/> */}
-      <section className="bg0 p-t-23 p-b-140 m-t-50" style={{marginTop:'0'}}>
+      {/* <Header/> */}
+      <section className="bg0 p-t-23 p-b-140 m-t-50" style={{ marginTop: '0' }}>
         <div className="container">
           {/* <div className="p-b-10">
             <h3 className="ltext-103 cl5">All Products</h3>
@@ -210,12 +208,48 @@ function Shop() {
 
                 <Link style={{ color: '#c39584', fontSize: '15px' }}
                   onClick={() => {
-                    getProductFunction(currentPage,perPage);
+                    getProductFunction(currentPage, perPage);
                   }}
                 >Clear All Filters</Link>
 
                 {/* <li><Link href="#">Contact</Link></li> */}
+                {/* <div className="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search">
+                  <i className="zmdi zmdi-search" />
+                </div>
+                <div className="modal-search-header flex-c-m trans-04 js-hide-modal-search">
+          <div className="container-search-header">
+            <button className="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
+              <img src="images/icons/icon-close2.png" alt="CLOSE" />
+            </button>
+            <form className="wrap-search-header flex-w p-l-15">
+              <button className="flex-c-m trans-04">
+                <i className="zmdi zmdi-search" />
+              </button>
+              <input
+                className="plh3"
+                type="text"
+                name="search"
+                placeholder="Search..."
+              onBlur={(e) => {
+                setFilterData({
+                  ...filterData,
+                  product_name_id: e.target.value,
+                });
+                handleFilter(
+                  filterData?.jwellery_type,
+                  filterData?.gender,
+                  filterData?.price,
+                  filterData?.product_name_id,
+                  e.target.value
+                );
+                // handleFilter(filterData?.price, filterData?.size, filterData?.colors,e.target.value)
+              }}
+              />
+            </form>
+          </div>
+        </div> */}
               </ul>
+
             </nav>
           </div>
           <div className="flex-w flex-sb-m p-b-52">
@@ -232,9 +266,9 @@ function Shop() {
                     <div className="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item men">
 
                       <div className="block2">
-                        
+
                         <div className="block2-pic hov-img0">
-                        {/* <a href={`${apiRoutes.APIHOSTNAME}images/${product.image_url}`} className="galleryimage">
+                          {/* <a href={`${apiRoutes.APIHOSTNAME}images/${product.image_url}`} className="galleryimage">
                           <AiOutlinePlus />
                         </a> */}
                           <img src={`${apiRoutes.APIHOSTNAME}images/${product.image_url}`} alt="IMG-PRODUCT" />
@@ -345,7 +379,7 @@ function Shop() {
           </div>
         </div>
       </section>
-   {/* <Footer/> */}
+      {/* <Footer/> */}
     </>
   )
 }

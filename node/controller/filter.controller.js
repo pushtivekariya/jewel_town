@@ -5,6 +5,11 @@ var filterProduct = (req, res) => {
   try {
     console.log(req.body, "!!!!!!!!!!!!!");
     let subsql = "";
+    // if (req.body.product_name_id != "" && req.body.product_name_id != "0") {
+    //   subsql += `${subsql != "" ? " AND " : ""}  product.product_name_id like = '%${
+    //     req.body.product_name_id
+    //   }%'`;
+    // }
     if (req.body.jwellery_type != "" && req.body.jwellery_type != "0") {
       subsql += `${subsql != "" ? " AND " : ""}  product.jwellary_type='${
         req.body.jwellery_type
