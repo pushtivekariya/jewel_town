@@ -44,9 +44,9 @@ function ContextUs() {
    {/* <Header/>   */}
       <section
     className="bg-img1 txt-center p-lr-15 p-tb-92"
-    style={{ backgroundImage: 'url("images/contact.png")' }}
+    style={{ backgroundImage: 'url("images/contact_us.jpg")' , height:'14rem' }}
   >
-    <h2 className="ltext-105 cl0 txt-center">Contact</h2>
+
   </section>
       <section className="contact">
         <div className="contactHeading">
