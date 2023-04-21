@@ -116,6 +116,12 @@ function Shop() {
   return (
 
     <>
+      <section
+    className="bg-img1 txt-center p-lr-15 p-tb-92"
+    style={{ backgroundImage: 'url("images/slider1.jpg")' , height:'14rem' }}
+  >
+
+  </section>
       {/* <Header/> */}
       <section className="bg0 p-t-23 p-b-140 m-t-50" style={{ marginTop: '0' }}>
         <div className="container">
@@ -123,8 +129,8 @@ function Shop() {
             <h3 className="ltext-103 cl5">All Products</h3>
           </div> */}
           <div className='filterdiv' >
-            <nav role="navigation" className="primary-navigation" style={{ marginTop: '-40px' }}>
-              <ul style={{ alignItems: 'center', marginTop: '70px' }}>
+            <nav role="navigation" className="primary-navigation">
+              <ul style={{ alignItems: 'center'}}>
                 <li style={{ border: '1px solid #c39584' }}><a href="#">Gender</a><MdArrowDropDown size="20px" />
                   <ul className="dropdown">
                     {

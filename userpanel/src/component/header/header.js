@@ -503,7 +503,7 @@ const Header = () => {
                   </ul>
                   <div className="w-full">
                     <div className="header-cart-total w-full p-tb-40">
-                      Total: {cartPrice}
+                      Total : Rs.{cartPrice}
                     </div>
                     <div className="header-cart-buttons flex-w w-full">
                       <Link
