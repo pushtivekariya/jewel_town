@@ -118,7 +118,7 @@ function Shop() {
     <>
       <section
     className="bg-img1 txt-center p-lr-15 p-tb-92"
-    style={{ backgroundImage: 'url("images/slider1.jpg")' , height:'14rem' }}
+    style={{ backgroundImage: 'url("images/shop2.jpg")' , height:'14rem' }}
   >
 
   </section>

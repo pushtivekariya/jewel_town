@@ -10,7 +10,6 @@ import { FaCheck } from 'react-icons/fa';
 
 function Promocode() {
     const [isCopied, setIsCopied] = useState(null);
-    const navigate = useNavigate
     const today = new Date();
     today.setHours(0, 0, 0, 0);
     const [promocodelist, setPromocodeList] = useState();
