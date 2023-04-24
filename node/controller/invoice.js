@@ -291,7 +291,7 @@ const finalDate =
             <tr>
               <td colspan="2"></td>
               <td colspan="2">GRAND TOTAL</td>
-              <td>${invoiceData.final_amount}</td>
+              <td>Rs.${invoiceData.final_amount}</td>
             </tr>
           </tfoot>
         </table>
