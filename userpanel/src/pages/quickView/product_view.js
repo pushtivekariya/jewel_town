@@ -230,6 +230,7 @@ function Product_view() {
                   <div className="product-div-left">
                     <div className="img-container">
                       <img
+                      style={{height:"400px",width:"400px"}}
                         src={`${apiRoutes.APIHOSTNAME}images/${view?.image_url}`}
                         alt="watch"
                       />
