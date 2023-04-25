@@ -44,6 +44,11 @@ const DeliveredOrder = () => {
       width: "160px",
     },
     {
+      name: "Final Amount",
+      selector: (row) => row.final_amount,
+      width: "160px",
+    },
+    {
       name: "Order Date",
       selector: (row) => row.order_date,
       width: "130px",

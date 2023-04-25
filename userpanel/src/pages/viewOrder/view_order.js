@@ -8,7 +8,7 @@ import {
 } from "../../api/common_api";
 
 import { MdCancelPresentation, MdFileDownloadOff } from "react-icons/md";
-import {RiCheckDoubleFill} from 'react-icons/ri'
+import { RiCheckDoubleFill } from "react-icons/ri";
 import { ImFolderDownload } from "react-icons/im";
 import { toast } from "react-toastify";
 import Header from "../../component/header/header";
@@ -42,7 +42,7 @@ function View_order() {
   const invoiceGenerate = async (data) => {
     const response = await generateInvoice(data);
     if (response.status == 1) {
-    //   toast.success("Invoice Generated Please Check Your Mail");
+      //   toast.success("Invoice Generated Please Check Your Mail");
     } else {
       toast.error("Invoice Not Generated");
     }
@@ -81,6 +81,8 @@ function View_order() {
         <>
           {row.order_status == 1 ? (
             <MdFileDownloadOff size="30px" style={{ marginLeft: "15px" }} />
+          ) : row.order_status == 2 ? (
+            <MdFileDownloadOff size="30px" style={{ marginLeft: "15px" }} />
           ) : (
             <Link
               type="button"
@@ -111,16 +113,21 @@ function View_order() {
       width: "120px",
     },
     {
-      name: "Action",
+      name: "Status",
       cell: (row) => (
         <>
           {row.order_status == 1 ? (
             <p style={{ marginLeft: "50px" }}>Canceled</p>
           ) : row.order_status == 4 ? (
-                <RiCheckDoubleFill
-                size="30px"
-                style={{ marginLeft: "60px" }}
-                />
+            <RiCheckDoubleFill size="30px" style={{ marginLeft: "60px" }} />
+          ) : row.order_status == 2 ? (
+            <>
+              <p style={{ marginLeft: "50px" }}>Refunded</p>
+            </>
+          ) : row.order_status == 3 ? (
+            <>
+              <p style={{ marginLeft: "50px" }}>Dispatched</p>
+            </>
           ) : (
             <Link
               type="button"
@@ -135,7 +142,7 @@ function View_order() {
                 if (response?.status == 1) {
                   toast.success("Your Order is cancel... ");
                   getOrderDataFunction();
-                } else if (response?.status == 3) {
+                } else if (row?.order_status == 3) {
                   toast.success(
                     "Your order is out of delivered. so, you can not cancel your order"
                   );
@@ -150,9 +157,7 @@ function View_order() {
                 style={{ marginLeft: "60px" }}
               />
             </Link>
-          )
-          
-          }
+          )}
         </>
       ),
       width: "180px",

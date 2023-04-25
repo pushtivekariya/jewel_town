@@ -36,6 +36,7 @@ setTimeout(() => {
     const response = await orderDetailsApi();
     setorderDetails(response.result);
   };
+  console.log(orderdata,"orderdetailssssss");
   useEffect(() => {
     getorderDataFunc();
     orderDetailsFunc();
@@ -62,6 +63,11 @@ setTimeout(() => {
     {
       name: "Discount Amount",
       selector: (row) => row.discount_amount,
+      width: "160px",
+    },
+    {
+      name: "Final Amount",
+      selector: (row) => row.final_amount,
       width: "160px",
     },
     {
