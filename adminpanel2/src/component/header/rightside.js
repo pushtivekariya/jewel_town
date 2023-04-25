@@ -5,9 +5,9 @@ const Rightside = () => {
     <>
       <>
   <div className="theme-setting-wrapper">
-    <div id="settings-trigger" style={{marginBottom:"4px"}}>
+    {/* <div id="settings-trigger" style={{marginBottom:"4px"}}>
       <i className="ti-settings" />
-    </div>
+    </div> */}
     <div id="theme-settings" className="settings-panel">
       <i className="settings-close ti-close" />
       <p className="settings-heading">SIDEBAR SKINS</p>
