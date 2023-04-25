@@ -45,7 +45,7 @@ const Orders = () => {
     if (response.status == 1) {
       toast.success("OTP Sent Successfully");
     
-      window.location.reload()
+      // window.location.reload()
     } else {
       toast.error("otp not sent");
     }
