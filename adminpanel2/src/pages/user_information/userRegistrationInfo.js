@@ -14,8 +14,8 @@ const UserRegistrationInfo = () => {
     setUserData(usersData.result);
   };
 
-  const blockuserfunc = async (user_id) => {
-    const response = await blockUserApi(user_id);
+  const blockuserfunc = async (user_id,email) => {
+    const response = await blockUserApi(user_id,email);
     setBlockUser(response.result);
     if (response.status == 1) {
       toast.error("user Blocked");
@@ -26,8 +26,8 @@ const UserRegistrationInfo = () => {
     getUserList();
   }, []);
 
-  const activeuserFunc = async (user_id) => {
-    const response = await activeUserApi(user_id);
+  const activeuserFunc = async (user_id,email) => {
+    const response = await activeUserApi(user_id,email);
     setActiveUser(response.result);
     if (response.status == 1) {
       toast.success("user Activated successfully");
@@ -101,7 +101,7 @@ const UserRegistrationInfo = () => {
               value="update"
               // className="btn btn-primary "
               onClick={() => {
-                blockuserfunc(row.user_id);
+                blockuserfunc(row.user_id,row.email);
                 window.location.reload();
               }}
               style={{ color: "#c39587" }}
@@ -117,7 +117,7 @@ const UserRegistrationInfo = () => {
               value="update"
               // className="btn btn-primary "
               onClick={() => {
-                activeuserFunc(row.user_id);
+                activeuserFunc(row.user_id,row.email  );
                 window.location.reload();
               }}
               style={{ color: "#c39587" }}
