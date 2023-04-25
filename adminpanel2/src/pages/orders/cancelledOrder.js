@@ -32,7 +32,7 @@ const CancelledOrder = () => {
     const options = {
       key: "rzp_test_R1c6XSSbNukNsh",
 
-      amount: (data.total_amount * 100).toString(),
+      amount: (data.final_amount * 100).toString(),
       currency: "INR",
       name: "Jewel Town",
       description: "Refund Transaction",
@@ -99,6 +99,11 @@ const CancelledOrder = () => {
     {
       name: "Discount Amount",
       selector: (row) => row.discount_amount,
+      width: "160px",
+    },
+    {
+      name: "Final Amount",
+      selector: (row) => row.final_amount,
       width: "160px",
     },
     {
