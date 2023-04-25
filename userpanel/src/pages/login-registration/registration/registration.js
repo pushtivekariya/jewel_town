@@ -12,6 +12,7 @@ const Registration = () => {
     email: "",
     contact_no: "",
     password: "",
+    confirmPassword:"",
     gender: "",
     date_of_birth: "",
   });
@@ -46,13 +47,11 @@ const Registration = () => {
     } else if (passValidation.test(data.password) === false) {
       toast.error("password must contain at least 8 char with uppercase, number and special char");
     } 
-    else if (data.confirmPassword == "") {
-      toast.error("please enter confirm password");
-    }
+   
     else if(data.confirmPassword == ""){
       toast.error("Please Enter Confirm Password")
     }
-    else if ((data.password !== data.confirmPassword) == false) {
+    else if ((data.password !== data.confirmPassword) == true) {
       toast.error("Password Does Not Match");
     } 
     else if (datevalidation() === false) {
@@ -130,6 +129,7 @@ const Registration = () => {
               <div className="input-box">
                 <span className="details">Confirm Password</span>
                 <input
+                name="confirmPassword"
                   type="password"
                   className="input-text"
                   placeholder="confirm password"
@@ -183,7 +183,7 @@ const Registration = () => {
                   <span className="dot two" />
                   <span className="gender">Female</span>
                 </label>
-                <label htmlFor="dot-3">
+                <label htmlFor="dot-3" style={ {display:"none"}}>
                   <span className="dot three" />
                   <span className="gender">Prefer not to say</span>
                 </label>

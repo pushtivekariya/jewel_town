@@ -1,6 +1,7 @@
 const con = require("../database");
 var bodyParser = require("body-parser");
 var md5 = require("md5");
+var nodemailer = require("nodemailer");
 
 // for insert category data
 
@@ -128,7 +129,9 @@ const addProduct = (req, res) => {
 //admin login
 const login = (req, res) => {
   try {
-    const login_qry = `select * from admin_information where admin_name='${req.body.admin_name}' and password='${md5(req.body.password)}'`;
+    const login_qry = `select * from admin_information where admin_name='${
+      req.body.admin_name
+    }' and password='${md5(req.body.password)}'`;
     con.query(login_qry, (error, result) => {
       console.log(result, "qqqqqqqqqqqqqqq");
       if (error) {
@@ -273,7 +276,7 @@ const prod_size = (req, res) => {
 const sizedata = (req, res) => {
   try {
     const getSizeQry = `select * from jwellary_size where product_name_id=${req.params.product_name_id}`;
-    con.query(getSizeQry, (error,result  ) => {
+    con.query(getSizeQry, (error, result) => {
       if (error) {
         console.log(error);
       } else {
@@ -285,7 +288,7 @@ const sizedata = (req, res) => {
   }
 };
 
-// get size data 
+// get size data
 const sizedataTable = (req, res) => {
   try {
     const getSizeQry = `select * ,(select product_names from product_name where product_name.product_name_id = jwellary_size.product_name_id group by product_name_id) as  product_names from jwellary_size where deleted = 0 `;
@@ -404,6 +407,47 @@ const BlockUser = (req, res) => {
       if (error) {
         console.log(error);
       } else {
+        var transporter = nodemailer.createTransport({
+          service: "gmail",
+          auth: {
+            user: "pushtivekariya76@gmail.com",
+            pass: "slxveenczexilkoz",
+          },
+        });
+
+        var mailOptions = {
+          from: "pushtivekariya76@gmail.com",
+          to: req.params.email,
+          subject: "Notification of Account Block",
+          text: `Dear  ${req.params.email},
+          
+                          I am writing to inform you that your account on Jeweltown has been blocked due to a violation of our site's privacy and policy.
+                          We take these violations very seriously in order to ensure the safety and privacy of all users on our platform.
+                        
+                          The specific behavior that led to your account being blocked was [insert specific behavior that violates the site's policy].
+                          As a result, you will no longer be able to access your account on Jeweltown.
+                          
+                          Thank you for your understanding and cooperation in ensuring a safe and respectful environment on our site.
+                       
+
+               
+                Sincerely,
+                Jewel Town `,
+        };
+
+        transporter.sendMail(mailOptions, function (error4, info4) {
+          if (error4) {
+            console.log(error4);
+          } else {
+            console.log("Email sent: " + info4.response);
+            res.send({
+              result: info4,
+              status: 1,
+              message: "sent",
+            });
+          }
+        });
+
         res.send({ result: result, status: 1 });
       }
     });
@@ -420,6 +464,47 @@ const activeUser = (req, res) => {
       if (error) {
         console.log(error);
       } else {
+        var transporter = nodemailer.createTransport({
+          service: "gmail",
+          auth: {
+            user: "pushtivekariya76@gmail.com",
+            pass: "slxveenczexilkoz",
+          },
+        });
+
+        var mailOptions = {
+          from: "pushtivekariya76@gmail.com",
+          to: req.params.email,
+          subject: "Notification of Account UnBlock",
+          text: `Dear  ${req.params.email},
+          
+                          I am writing to inform you that your account on Jeweltown has been blocked due to a violation of our site's privacy and policy.
+                          We take these violations very seriously in order to ensure the safety and privacy of all users on our platform.
+                        
+                          The specific behavior that led to your account being blocked was [insert specific behavior that violates the site's policy].
+                          As a result, you will no longer be able to access your account on Jeweltown.
+                          
+                          Thank you for your understanding and cooperation in ensuring a safe and respectful environment on our site.
+                       
+
+               
+                Sincerely,
+                Jewel Town `,
+        };
+
+        transporter.sendMail(mailOptions, function (error4, info4) {
+          if (error4) {
+            console.log(error4);
+          } else {
+            console.log("Email sent: " + info4.response);
+            res.send({
+              result: info4,
+              status: 1,
+              message: "sent",
+            });
+          }
+        });
+
         res.send({ result: result, status: 1 });
       }
     });
@@ -515,42 +600,38 @@ const getprodDatatable = (req, res) => {
   }
 };
 
-
 // delete product data
-const deleteProdData = (req,res)=>{
+const deleteProdData = (req, res) => {
   try {
-    const deleteProdQry = `UPDATE product SET deleted = 1 WHERE product_id = ${req.params.product_id}`
+    const deleteProdQry = `UPDATE product SET deleted = 1 WHERE product_id = ${req.params.product_id}`;
     // UPDATE user_registration SET status = 0 WHERE user_id = ${req.params.user_id}
-    con.query(deleteProdQry,(error,result)=>{
+    con.query(deleteProdQry, (error, result) => {
       if (error) {
         console.log(error);
       } else {
-        res.send({result:result,status:1})
+        res.send({ result: result, status: 1 });
       }
-    })
+    });
   } catch (error) {
     console.log(error);
   }
-}
-
+};
 
 // get product stock data
-const getStockData = (req,res)=>{
+const getStockData = (req, res) => {
   try {
-    const getStockDataQry = `select *,(select short_description from product where product.product_id = stock.product_id) as product_name from stock`
-    con.query(getStockDataQry,(error,result)=>{
+    const getStockDataQry = `select *,(select short_description from product where product.product_id = stock.product_id) as product_name from stock`;
+    con.query(getStockDataQry, (error, result) => {
       if (error) {
         console.log(error);
       } else {
-        res.send({result:result,status:1,message:"stock data get"})
+        res.send({ result: result, status: 1, message: "stock data get" });
       }
-    })
+    });
   } catch (error) {
     console.log(error);
   }
-}
-
-
+};
 
 module.exports = {
   addcategory,
@@ -579,5 +660,5 @@ module.exports = {
   getprodDatatable,
   activeUser,
   deleteProdData,
-  getStockData
+  getStockData,
 };

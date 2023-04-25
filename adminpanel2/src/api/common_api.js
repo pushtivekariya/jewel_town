@@ -192,9 +192,9 @@ const deleteSubCatApi = async (subcategory_id) => {
   }
 };
 // block user
-const blockUserApi = async (user_id) => {
+const blockUserApi = async (user_id,email) => {
   try {
-    const res = await ApiHelperGet(APIRoutes.BLOCKUSER + `/${user_id}`);
+    const res = await ApiHelperGet(APIRoutes.BLOCKUSER + `/${user_id}/${email}`);
     return res;
   } catch (error) {
     console.log(error);
@@ -202,9 +202,9 @@ const blockUserApi = async (user_id) => {
 };
 
 // active user
-const activeUserApi = async (user_id) => {
+const activeUserApi = async (user_id,email) => {
   try {
-    const res = await ApiHelperGet(APIRoutes.ACTIVEUSER + `/${user_id}`);
+    const res = await ApiHelperGet(APIRoutes.ACTIVEUSER + `/${user_id}/${email}`);
     return res;
   } catch (error) {
     console.log(error);

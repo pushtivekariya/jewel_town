@@ -104,9 +104,9 @@ app.get(
   admincontroller.deleteSubCategory
 );
 // block user
-app.get("/BlockUser/:user_id", admincontroller.BlockUser);
+app.get("/BlockUser/:user_id/:email", admincontroller.BlockUser);
 // active user
-app.get("/ActiveUser/:user_id", admincontroller.activeUser);
+app.get("/ActiveUser/:user_id/:email", admincontroller.activeUser);
 
 // get images data
 app.get("/getImages", admincontroller.getImagesData);
