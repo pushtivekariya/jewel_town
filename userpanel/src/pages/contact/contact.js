@@ -36,6 +36,10 @@ function ContextUs() {
       console.log(result);
       if (result.status == 1) {
         toast.success("We are Connect To You In Shortly")
+        setContactData({
+          name :"",
+          email :"",
+          comment:""})
       }
     }
   };
@@ -96,7 +100,7 @@ function ContextUs() {
                   <input
                     type="text"
                     placeholder="Name"
-                    
+                    value={contactData.name}
                     name="name"
                     onChange={(e) => {
                       changeData(e);
@@ -105,7 +109,7 @@ function ContextUs() {
                   <input
                     type="email"
                     placeholder="Email"
-                    
+                    value={contactData.email}
                     name="email"
                     onChange={(e) => {
                       changeData(e);
@@ -115,6 +119,7 @@ function ContextUs() {
                   maxLength="255"
                     placeholder="Comment"
                     className="textarea"
+                    value={contactData.comment}
                     name="comment"
                     onChange={(e) => {
                       changeData(e);
